@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+}
+
+h1 {
+    font-size: 3.2em;
+    font-weight: bold;
+    margin-top: 4px;
+    padding: 0 15px;
+    line-height: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header-container, .main-container, .footer-container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.main-container {
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+}
+
+.main-container .resource, .main-container h3 {
+    padding: 16px 23px;
+}
+
+.main-container h3 {
+    margin: 0;
+    color: #373E41;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ECEFF1;
+}
+
+.main-container h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.main-container p {
+    margin: 0;
+}
+
+
+.headerSection{
+    background: #464547;
+    color: #fff;
+}
+
+.leftSection{
+    background: #33393a;
+    max-height: 100%;
+    height: 100vh;
+}
+
+.leftSection ul{
+    list-style-type: none;
+    padding: 15px;
+}
+
+.leftSection ul li{
+    font-size: 1.3em;
+    color: #fff;
+    padding: 5px 10px;
+    background: #222525;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+.leftSection ul li:hover, .leftSection ul li.active {
+     background: #39c2d7;
+}
+
+.tileContentBlock{ border: 2px solid #39c2d7; overflow: hidden; margin-bottom: 15px; padding: 5px; cursor: pointer;}
+.tileContentBlock:hover{ border: 2px solid #149cb1;  box-shadow: 0px 0px 15px #149cb1}
+.tileContentBlock .content h1{ font-size: 1.5em; padding: 0; height: 50px;}
+.thumbnail{ margin-bottom: 0;}
+.removePad{ padding: 0 15px 0 0;}
+
+
+.control-label{ font-size: 16px; color: #39c2d7; padding-bottom: 8px;}
+
+.control-label span{ color: #333333}
+
+.custBtn{ margin: 10px 0; background: #39c2d7; border: 1px solid #0ca6bd}
+.btnWrap .btn-primary:hover{ background: #25a0b3; border: 1px solid #0ca6bd}
+
+input.searchFilter{
+    margin: 20px 0px;
+    padding: 5px 0px;
+    width: 360px;
+    border: 2px solid #39c2d7;
+}
+input.searchFilter:hover{ border: 2px solid #149cb1;  box-shadow: 0px 0px 10px #149cb1}
+
+textarea.commentText{
+    margin: 20px 0px;
+    padding: 5px 0px;
+    width: 500px;
+    border: 2px solid #39c2d7;
+}
+textarea.commentText:hover{ border: 2px solid #149cb1;  box-shadow: 0px 0px 10px #149cb1}
+
+.textarea-label{ font-size: 18px; color: #333333; padding-top: 22px; padding-bottom: 8px;}
+.padding-top-bottom{
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+

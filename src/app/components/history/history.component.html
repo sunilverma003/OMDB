@@ -1,0 +1,21 @@
+<div>
+    <br>
+    <button type="button" class="btn btn-default btn-sm" (click)="deleteHistory()" blur>
+		<span class="glyphicon glyphicon-trash"></span> Delete History
+	</button>
+    <hr/>
+
+    <div class="list-group">
+        <a *ngFor="let movie of movieHistory | orderByDateTime" class="list-group-item">
+			<div class ="row">
+				<div class="col-xs-6" >
+					<h5> {{movie.Title}} </h5>
+					<p> {{movie.Year}} <p>
+				</div>
+                <div class="col-xs-3" >
+                    <p>{{movie.TimeOfSearch | date: "medium"}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

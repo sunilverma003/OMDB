@@ -1,0 +1,7 @@
+<div>
+    <h3>Movies</h3>
+    <input type="text" [(ngModel)]="searchTxt" placeholder="search by title or year" class="searchFilter" />
+    <div class="resource" *ngFor="let movie of movies | search: searchTxt">
+        <movie-tile [movieInput]="movie"></movie-tile>
+    </div>
+</div>

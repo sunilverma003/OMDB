@@ -1,0 +1,12 @@
+<form name="comment-form" (ngSubmit)="addComment(movieComment)" #f="ngForm" novalidate>
+    <div class="col-md-6">
+      <label class="col-md-12 textarea-label">Add Comment</label>  <textarea rows="4" cols="50" name="commentArea" class="form-control commentText" [(ngModel)]="movieComment.comment" #comment="ngModel"> </textarea>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-12">
+               <button type="submit" class="btn btn-primary custBtn" tabindex="1">Sumbit</button>
+               <button type="button" class="btn btn-primary custBtn" tabindex="2" (click)="onCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    

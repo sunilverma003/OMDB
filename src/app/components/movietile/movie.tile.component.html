@@ -1,0 +1,16 @@
+<div class="col-md-6 removePad" (click)="onClick()">
+    <div class="tileContentBlock">
+        <div class="thumbnail col-md-4">
+            <img [src]="movieInput.Poster" style="height:200px;" />
+        </div>
+        <div class="content col-md-8">
+            <h1>{{movieInput.Title}}</h1>
+            <div>
+                <p>Type: {{movieInput.Type}}</p>
+                <p>ImdbId: {{movieInput.imdbID}}</p>
+                <p>Year: {{movieInput.Year}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

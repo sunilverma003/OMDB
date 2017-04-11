@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-sm-6 col-md-12 btnWrap">
+        <button class="btn btn-primary custBtn" (click)="back()">Back</button>
+    </div>
+</div>
+<div class="col-md-12">
+
+    <ul class="nav nav-tabs" (click)="getComment()">
+        <li class="active"><a data-toggle="tab" href="#detail">Detail</a></li>
+        <li><a data-toggle="tab" href="#comment">Comment</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="detail" class="tab-pane fade in active padding-top-bottom">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Title : <span>{{movieDetail.Title}}</span></div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Year : <span>{{movieDetail.Year}}</span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Released : <span>{{movieDetail.Released}}</span></div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Runtime : <span>{{movieDetail.Runtime}}</span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Genre : <span>{{movieDetail.Genre}}</span></div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Actors : <span>{{movieDetail.Actors}}</span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Awards : <span>{{movieDetail.Awards}}</span></div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">ImdbRating : <span>{{movieDetail.imdbRating}}</span></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">Type : <span>{{movieDetail.Type}}</span></div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="control-label">ImdbVotes : <span>{{movieDetail.imdbVotes}}</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="comment" class="tab-pane fade padding-top-bottom">
+            <div class="row">
+                <div class="col-sm-6 col-md-12 btnWrap">
+                    <button class="btn btn-primary custBtn" (click)="addComment()">Add Comment</button>
+
+                    <div class="list-group">
+                        <div *ngFor="let comment of comments | orderByDateTime" class="list-group-item">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p> {{comment.comment}} </p>
+                                </div>
+                                <div class="col-xs-3">
+                                    <p>{{comment.timeOfComment | date: "medium"}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

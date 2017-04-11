@@ -1,0 +1,35 @@
+<div class="container">
+    <!--Header Section-->
+    <header class="headerSection">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h1 class="title">EMDB</h1>
+            </div>
+        </div>
+    </header>
+
+    <!--Content Area-->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="leftSection">
+            <ul>
+                <li [routerLinkActive]="['active']" [routerLink]="['movie']" class="active">Movies</li>
+                <li [routerLinkActive]="['active']" [routerLink]="['history']">History</li>
+            </ul>
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <router-outlet></router-outlet>
+            <!--<div class="row">
+                <div class="col-md-10">
+                     <input type="text" class="  search-query form-control" placeholder="Search" />
+                </div>
+                <div class="col-md-2">
+                    Icon
+                </div>
+            </div>-->
+             
+        </div>
+    </div>
+</div>

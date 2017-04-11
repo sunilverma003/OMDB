@@ -1,0 +1,33 @@
+<div>
+    <h3>Movies</h3>
+    <input type="text" [(ngModel)] = "searchTxt" placeholder="search by title or year" class="searchFilter"/>
+    <div class="resource" *ngFor="let movie of movies | search: searchTxt">
+        <!--<movie-tile [movieInput]="movie"></movie-tile>-->
+       <div class="col-md-6 removePad" (click)="onClick()">
+       <div class="tileContentBlock">
+        <div class="thumbnail col-md-4">
+            <img [src]="movie.Poster" style="height:200px;" />
+        </div>
+        <div class="content col-md-8">
+            <h1>{{movie.Title}}</h1>
+            <div>
+                <p>Type: {{movie.Type}}</p>
+                <p>ImdbId: {{movie.imdbID}}</p>
+                <p>Year: {{movie.Year}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+    <div>
+       <h3>Add Movie</h3>
+       <input type="text"  [(ngModel)]="movie.Poster"/>
+       <input type="text"  [(ngModel)]="movie.Title"/>
+       <input type="text"  [(ngModel)]="movie.Type"/>
+       <input type="text"  [(ngModel)]="movie.imdbID"/>
+       <input type="text"  [(ngModel)]="movie.Year"/>
+       <input type="button" (click)="addMovie(movie)"/>
+    </div>
+
+</div>
